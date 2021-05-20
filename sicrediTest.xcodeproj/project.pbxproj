@@ -10,12 +10,13 @@
 		5C91312F2655F695003A03A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C91312E2655F695003A03A0 /* AppDelegate.swift */; };
 		5C9131312655F695003A03A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9131302655F695003A03A0 /* SceneDelegate.swift */; };
 		5C9131332655F695003A03A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9131322655F695003A03A0 /* ViewController.swift */; };
-		5C9131362655F695003A03A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C9131342655F695003A03A0 /* Main.storyboard */; };
 		5C9131392655F695003A03A0 /* sicrediTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C9131372655F695003A03A0 /* sicrediTest.xcdatamodeld */; };
 		5C91313B2655F696003A03A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C91313A2655F696003A03A0 /* Assets.xcassets */; };
 		5C91313E2655F696003A03A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C91313C2655F696003A03A0 /* LaunchScreen.storyboard */; };
 		5C9131492655F696003A03A0 /* sicrediTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9131482655F696003A03A0 /* sicrediTestTests.swift */; };
 		5C9131542655F696003A03A0 /* sicrediTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9131532655F696003A03A0 /* sicrediTestUITests.swift */; };
+		5CBDF2582655FADB0032FE20 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBDF2572655FADB0032FE20 /* Event.swift */; };
+		5CBDF25D2655FD970032FE20 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBDF25C2655FD970032FE20 /* Parser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		5C91312E2655F695003A03A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C9131302655F695003A03A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5C9131322655F695003A03A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5C9131352655F695003A03A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C9131382655F695003A03A0 /* sicrediTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sicrediTest.xcdatamodel; sourceTree = "<group>"; };
 		5C91313A2655F696003A03A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C91313D2655F696003A03A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,8 @@
 		5C91314F2655F696003A03A0 /* sicrediTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sicrediTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C9131532655F696003A03A0 /* sicrediTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sicrediTestUITests.swift; sourceTree = "<group>"; };
 		5C9131552655F696003A03A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CBDF2572655FADB0032FE20 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		5CBDF25C2655FD970032FE20 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +103,12 @@
 		5C91312D2655F695003A03A0 /* sicrediTest */ = {
 			isa = PBXGroup;
 			children = (
+				5CBDF2502655F9D40032FE20 /* ViewModel */,
+				5CBDF24F2655F9CF0032FE20 /* View */,
+				5CBDF24E2655F9C80032FE20 /* Model */,
 				5C91312E2655F695003A03A0 /* AppDelegate.swift */,
 				5C9131302655F695003A03A0 /* SceneDelegate.swift */,
 				5C9131322655F695003A03A0 /* ViewController.swift */,
-				5C9131342655F695003A03A0 /* Main.storyboard */,
 				5C91313A2655F696003A03A0 /* Assets.xcassets */,
 				5C91313C2655F696003A03A0 /* LaunchScreen.storyboard */,
 				5C91313F2655F696003A03A0 /* Info.plist */,
@@ -129,6 +133,29 @@
 				5C9131552655F696003A03A0 /* Info.plist */,
 			);
 			path = sicrediTestUITests;
+			sourceTree = "<group>";
+		};
+		5CBDF24E2655F9C80032FE20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5CBDF2572655FADB0032FE20 /* Event.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5CBDF24F2655F9CF0032FE20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5CBDF2502655F9D40032FE20 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5CBDF25C2655FD970032FE20 /* Parser.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +263,6 @@
 			files = (
 				5C91313E2655F696003A03A0 /* LaunchScreen.storyboard in Resources */,
 				5C91313B2655F696003A03A0 /* Assets.xcassets in Resources */,
-				5C9131362655F695003A03A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,8 +289,10 @@
 			files = (
 				5C9131332655F695003A03A0 /* ViewController.swift in Sources */,
 				5C91312F2655F695003A03A0 /* AppDelegate.swift in Sources */,
+				5CBDF25D2655FD970032FE20 /* Parser.swift in Sources */,
 				5C9131312655F695003A03A0 /* SceneDelegate.swift in Sources */,
 				5C9131392655F695003A03A0 /* sicrediTest.xcdatamodeld in Sources */,
+				5CBDF2582655FADB0032FE20 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,14 +328,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5C9131342655F695003A03A0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5C9131352655F695003A03A0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5C91313C2655F696003A03A0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
